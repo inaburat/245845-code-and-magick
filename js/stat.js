@@ -32,9 +32,7 @@ window.renderStatistics = function (ctx, names, times) {
   for (var i = 0; i < times.length; i++) {
     ctx.fillStyle = '#000';
     ctx.fillText(parseInt(times[i], 10), initialX + indent * i, initialY - times[i] * step - lineHeight);
-
     ctx.fillStyle = (names[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : randomOpacity();
-
     ctx.fillRect(initialX + indent * i, initialY - times[i] * step, barWidth, times[i] * step);
     ctx.fillStyle = '#000';
     ctx.fillText(names[i], initialX + indent * i, initialY + lineHeight);
